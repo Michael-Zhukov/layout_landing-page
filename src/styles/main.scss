@@ -70,6 +70,7 @@ body {
 
   display: none;
 }
+
 .menu__nav {
   display: flex;
   flex-direction: column;
@@ -167,13 +168,6 @@ body {
   filter: brightness(0);
 }
 
-.menu__link {
-  color: #000;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-}
-
 .menu__link:last-child {
   margin-bottom: 0;
 }
@@ -223,6 +217,7 @@ body {
   padding: 92px 20px 0;
   background-color: #1d1d1d;
 }
+
 .compare__title {
   width: 280px;
   height: 32px;
@@ -453,6 +448,7 @@ body {
   padding: 80px 20px 120px;
   background-color: #1d1d1d;
 }
+
 .contacts__title {
   width: 280px;
   height: 32px;

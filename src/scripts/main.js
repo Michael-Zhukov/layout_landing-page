@@ -1,3 +1,4 @@
+import '../styles/main.scss';
 const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.header__menu');
 const closeButton = document.querySelector('.menu__close');
