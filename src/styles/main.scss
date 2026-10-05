@@ -157,7 +157,7 @@ body {
   width: 155px;
   height: 27px;
   margin: 40px 0 0;
-  transition: color 0.3s ease;
+
   color: #1d1d1d;
   text-decoration: none;
 
@@ -172,7 +172,7 @@ body {
 
 .menu__test-ride {
   display: block;
-  transition: color 0.3s ease;
+
   width: 136px;
   height: 16px;
   margin-top: 16px;
@@ -743,6 +743,9 @@ body {
 
 /* tablet */
 @media (min-width: 744px) {
+  aside.menu {
+    --menu-content-width: 600px;
+  }
   .header {
     position: relative;
   }
@@ -869,6 +872,9 @@ aside.menu {
 
 /* desktop */
 @media (min-width: 1260px) {
+  body .menu {
+    --menu-content-width: 1020px;
+  }
   .header__top {
     max-width: 1260px;
     margin: 0 auto;
