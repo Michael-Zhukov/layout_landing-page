@@ -18,3 +18,10 @@ menuLinks.forEach((link) => {
     menu.style.display = 'none';
   });
 });
+
+const form = document.querySelector('.contacts__form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  form.reset();
+});
