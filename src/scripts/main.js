@@ -1,21 +1,21 @@
 import '../styles/main.scss';
+
 const menu = document.querySelector('.menu');
 const menuButton = document.querySelector('.header__menu');
 const closeButton = document.querySelector('.menu__close');
+const menuLinks = document.querySelectorAll('.menu__link');
 
 menuButton.addEventListener('click', () => {
-  menu.style.display = 'block';
+  menu.classList.add('menu--open');
 });
 
 closeButton.addEventListener('click', () => {
-  menu.style.display = 'none';
+  menu.classList.remove('menu--open');
 });
-
-const menuLinks = document.querySelectorAll('.menu__link');
 
 menuLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    menu.style.display = 'none';
+    menu.classList.remove('menu--open');
   });
 });
 
