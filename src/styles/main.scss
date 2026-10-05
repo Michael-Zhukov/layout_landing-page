@@ -112,6 +112,8 @@ body {
 }
 
 .menu {
+  --menu-content-width: calc(100% - 40px);
+
   position: fixed;
   inset: 0;
   z-index: 10;
@@ -126,7 +128,7 @@ body {
   flex-direction: column;
 
   box-sizing: border-box;
-  width: 280px;
+  width: var(--menu-content-width);
   margin: 0 auto;
   padding: 110px 0 0;
 }
@@ -136,7 +138,7 @@ body {
 
   height: 22px;
   margin: 0 0 32px;
-
+  transition: color 0.3s ease;
   color: #1d1d1d;
   text-decoration: none;
 
@@ -155,7 +157,7 @@ body {
   width: 155px;
   height: 27px;
   margin: 40px 0 0;
-
+  transition: color 0.3s ease;
   color: #1d1d1d;
   text-decoration: none;
 
@@ -170,7 +172,7 @@ body {
 
 .menu__test-ride {
   display: block;
-
+  transition: color 0.3s ease;
   width: 136px;
   height: 16px;
   margin-top: 16px;
@@ -189,15 +191,16 @@ body {
 
 .menu__phone,
 .menu__test-ride {
-  width: 280px;
+  width: var(--menu-content-width);
   margin-left: auto;
   margin-right: auto;
+  transition: color 0.3s ease;
 }
 
 .menu__close {
   position: absolute;
   top: 24px;
-  right: max(20px, calc((100% - 280px) / 2));
+  right: calc((100% - var(--menu-content-width)) / 2);
 
   width: 24px;
   height: 24px;
@@ -213,7 +216,7 @@ body {
 .menu__logo {
   position: absolute;
   top: 24px;
-  left: max(20px, calc((100% - 280px) / 2));
+  left: calc((100% - var(--menu-content-width)) / 2);
 }
 
 .menu__logo img {
@@ -225,6 +228,12 @@ body {
 
 .menu__link:last-child {
   margin-bottom: 0;
+}
+
+.menu__link:hover,
+.menu__phone:hover,
+.menu__test-ride:hover {
+  color: #7e7e83;
 }
 
 .about {
@@ -854,6 +863,10 @@ body {
   }
 }
 
+aside.menu {
+  --menu-content-width: 600px;
+}
+
 /* desktop */
 @media (min-width: 1260px) {
   .header__top {
@@ -906,6 +919,10 @@ body {
     width: 100%;
     height: auto;
   }
+}
+
+body .menu {
+  --menu-content-width: 1020px;
 }
 
 @media (min-width: 744px) {
